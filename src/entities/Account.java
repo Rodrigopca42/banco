@@ -1,10 +1,11 @@
 package entities;
 
+// classe conta
 public class Account {
 
-	private Integer number;
-	private String holder;
-	private Double balance;
+	private Integer number; //número da conta
+	private String holder; // nome do cliente
+	protected Double balance; //saldo
 	
 	public Account() {
 	}
@@ -35,10 +36,11 @@ public class Account {
 		return balance;
 	}
 
+	//metodo para saque, o valor é descontado da conta junto com uma taxa de juros.
 	public void withdraw(double amount) {
-		balance += amount;
+		balance -= amount + 5.0;
 	}
-	
+	 //metodo para deposito,um valor será acrescentado ao saldo.
 	public void deposit(double amount) {
 		balance += amount;
 	}
